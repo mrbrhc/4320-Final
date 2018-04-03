@@ -7,18 +7,26 @@ Axosoft URL:
 Group members: Mason Breece,
                Joseph Bertolino,
                Kristyn Long
-               Dean Ampong
 
 General outline: NFL fan page:
-Home, 
-contact me, 
-History,
-32 teams, 
-login,
+Home, (sprint 1)
+
+contact me, (sprint3)
+
+History,(sprint 1)
+
+32 teams, (sprint 2)
+
+login,(sprint 3)
+
+video. (sprint 4)
 
 agile details - 1 week sprints(start and end on tuesday),
-                axosoft,
+
+                axosoft,(add URL here)
+                
                 objective finish on 24 april,
+                
                 24-26 video pres,
                 
                 
