@@ -4,6 +4,7 @@ Project:
 
 Axosoft URL:
 
-Group members: Mason Breece
-               Joseph Bertolino
+Group members: Mason Breece,
+               Joseph Bertolino,
+               Kristyn Long
 
