@@ -1,12 +1,14 @@
-ReadMe.md
+# 4320 Final Project
 
-Project:
+Project: NFL Fan Page
 
-Axosoft URL:
+[Axosoft URL](https://kristynl.axosoft.com/)
 
 Group members: Mason Breece,
                Joseph Bertolino,
-               Kristyn Long
+               Kristyn Long, 
+               Dean Ampong,
+               Cord Stojeba
 
 General outline: NFL fan page:
 Home, (sprint 1)
