@@ -7,6 +7,7 @@ Axosoft URL:
 Group members: Mason Breece,
                Joseph Bertolino,
                Kristyn Long
+               Dean Ampong
 
 General outline: NFL fan page:
 Home, 
