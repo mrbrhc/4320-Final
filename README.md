@@ -8,22 +8,23 @@ Group members: Mason Breece,
                Joseph Bertolino,
                Kristyn Long, 
                Dean Ampong,
-               Cord Stojeba
+               Cord Stojeba,
+               Austin Kauble
 
 General outline: NFL fan page:
-Home, (sprint 1)
+* Home, (sprint 1)
 
-contact me, (sprint3)
+* contact me, (sprint3)
 
-History,(sprint 1)
+* History,(sprint 1)
 
-32 teams, (sprint 2)
+* 32 teams, (sprint 2)
 
-login,(sprint 3)
+* login,(sprint 3)
 
-video. (sprint 4)
+* video. (sprint 4)
 
-agile details - 1 week sprints(start and end on tuesday),
+* agile details - 1 week sprints(start and end on tuesday),
 
                 axosoft,(add URL here)
                 
