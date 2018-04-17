@@ -1,5 +1,5 @@
 <?php
-    //db credientials
+    //db credientials need to be added
     $servername = getenv('IP');
     $dbusername = getenv('C9_USER');
     $dbpassword = "";
