@@ -1,36 +1,16 @@
-nfl teams added
+log out button 
 
--what do we want for each team
+history html page
 
--past record
+highlight html pages
 
--current players
+team info page
 
--records from past players
+templet by Thu
 
--current record holders
-
--last super bowl win
-
--stadium stats such as total seating
+finish teams by Tus
 
 
-style start/css
-
--how much and how
-
-nhl home page
-
-
--tabs to different teams
-
---style for different teams
-
--logout button
-
--images added
-
--nfl/teams
 
 
 
