@@ -4,7 +4,12 @@ Project: NFL Fan Page
 
 [Axosoft URL](https://kristynl.axosoft.com/)
 
-[WebApp URL]()
+[WebApp URL](http://72.14.185.133/)
+
+
+ADD URL TO WEBAPP URL,
+Data base cred needs to be filled on db.php
+
 
 Group members: Mason Breece,
                Joseph Bertolino,
@@ -14,17 +19,17 @@ Group members: Mason Breece,
                Austin Kauble
 
 General outline: NFL fan page:
-* Home, (sprint 1)
+* Home (sprint 1)
 
-* contact me, (sprint3)
+* contact me (sprint3)
 
-* History,(sprint 1)
+* History(sprint 1)
 
-* 32 teams, (sprint 2)
+* 32 teams (sprint 2)
 
-* login,(sprint 3)
+* login, team page / remaining teams(sprint 3)
 
-* video. (sprint 4)
+* login authorization on all pages / video. (sprint 4)
 
 * agile details - 1 week sprints(start and end on tuesday),
 
