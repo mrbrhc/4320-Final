@@ -307,8 +307,110 @@
 					}
     			});
 			}
+            
+            function getIndianapolisColts(){
+                document.getElementByIndianapolisColts("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/xml/IndianapolisColts.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("indianapolisColts").each(function(){
+                			$("#rb").append("<li>" + “the Indianapolis Colts are in the” $(this).find(“divison”).text() + "</br>" 
+                			+ "the Indianapolis Colts are owned by" +  $(this).find(“owner”).text() + "</br>" 
+                			+ "the Indianapolis Colts were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
+                			+ "</br>" 
+                			+ "the Indianapolis Colts overall record is" + $(this).find(“record”).text() + "</br>"
+                			+ "the Indianapolis Colts rivals are" + $(this).find(“rivals”).text() + "</br>"
+                			+ "the Indianapolis Colts stadium name is" + $(this).find(“stadium_name”).text() + "</br>"
+                			+ "the Indianapolis Colts have won" + $(this).find(“superbowls”).text() + " superbowls" + "</br>"
+                			+ "the Indianapolis Colts have" + $(this).find(“HOF_number”).text() + "in the Hall of Fame" + "</br>"
+                			+ "the Indianapolis Colts Hall of Famers are" + $(this).find(“HOF”).text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+            
+             function getHoustonTexans
+                document.getElementByHoustonTexans("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/xml/HoustonTexans.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("houstonTexans").each(function(){
+                			$("#rb").append("<li>" + “the Houston Texans are in the” $(this).find(“divison”).text() + "</br>" 
+                			+ "the Houston Texans are owned by" +  $(this).find(“owner”).text() + "</br>" 
+                			+ "the Houston Texans were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
+                			+ "</br>" 
+                			+ "the Houston Texans overall record is" + $(this).find(“record”).text() + "</br>"
+                			+ "the Houston Texans rivals are" + $(this).find(“rivals”).text() + "</br>"
+                			+ "the Houston Texans stadium name is" + $(this).find(“stadium_name”).text() + "</br>"
+                			+ "the Houston Texans have won" + $(this).find(“superbowls”).text() + " superbowls" + "</br>"
+                			+ "the Houston Texans have" + $(this).find(“HOF_number”).text() + "in the Hall of Fame" + "</br>"
+                			+ "the Houston Texans Hall of Famers are" + $(this).find(“HOF”).text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
 			
-			
+	function getGreenBayPackers(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                url: “http://72.14.185.133/xml/GreenBayPackers.XML”, 
+                type:"GET", 
+                datatype:"xml", 
+                success: function(xml){
+                $( "#rb" ).html("<ul>\n");
+                $(xml).find("greenBayPackersinfo").each(function(){
+                $("#rb").append("<li>" + "the GreenBay Packers are in the" $(this).find(“divison”).text() + "</br>" 
+                + "the GreenBay Packers are owned by" +  $(this).find(“owner”).text() + "</br>" 
+                + "the GreenBay Packers were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
+                + "</br>" 
+                + "the GreenBay Packers overall record is" + $(this).find(“record”).text() + "</br>"
+                + "the GreenBay Packers rivals are" + $(this).find(“rivals”).text() + "</br>"
+                + "the GreenBay Packers stadium name is" + $(this).find(“stadium_name”).text() + "</br>"
+                + "the GreenBay Packers have won" + $(this).find(“superbowls”).text() + " superbowls" + "</br>"
+                + "the GreenBay Packers have" + $(this).find(“HOF_number”).text() + "in the Hall of Fame" + "</br>"
+                + "the GreenBay Packers Hall of Famers are" + $(this).find(“HOF”).text() + "</br>" + "</li>" 
+	);
+	});
+	$("#rb").append("</ul>");
+	}
+    	});
+	}
+    
+    function getDetroitLions(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                url: “http://72.14.185.133/xml/DetroitLions.XML”, 
+                type:"GET", 
+                datatype:"xml", 
+                success: function(xml){
+                $( "#rb" ).html("<ul>\n");
+                $(xml).find("detroitLionsinfo").each(function(){
+                $("#rb").append("<li>" + "the Detroit Lions are in the" $(this).find(“divison”).text() + "</br>" 
+                + "the Detroit Lions are owned by" +  $(this).find(“owner”).text() + "</br>" 
+                + "the Detroit Lions were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
+                + "</br>" 
+                + "the Detroit Lions overall record is" + $(this).find(“record”).text() + "</br>"
+                + "the Detroit Lions rivals are" + $(this).find(“rivals”).text() + "</br>"
+                + "the Detroit Lions stadium name is" + $(this).find(“stadium_name”).text() + "</br>"
+                + "the Detroit Lions have won" + $(this).find(“superbowls”).text() + " superbowls" + "</br>"
+                + "the Detroit Lions have" + $(this).find(“HOF_number”).text() + "in the Hall of Fame" + "</br>"
+                + "the Detroit Lions Hall of Famers are" + $(this).find(“HOF”).text() + "</br>" + "</li>" 
+	);
+	});
+	$("#rb").append("</ul>");
+	}
+    	});
+	}
     
 >>>>>>> teamView
 
