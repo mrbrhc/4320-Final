@@ -1,9 +1,9 @@
 <?php
     //db credientials need to be added
-    $servername = getenv('4320nfl');
-    $dbusername = getenv('4320nfl');
-    $dbpassword = "4320nfl";
-    $database = "4320nfl";
+    $servername = getenv('sql203.epizy.com');
+    $dbusername = getenv('epiz_22029092');
+    $dbpassword = "mrbrhc";
+    $database = "epiz_22029092_4320final";
     $dbport = 3306;
 
     // Create connection
