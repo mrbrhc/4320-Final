@@ -271,7 +271,7 @@
                 datatype:"xml", 
                 success: function(xml){
                 $( "#rb" ).html("<ul>\n");
-                $(xml).find("GreenBayPackersinfo").each(function(){
+                $(xml).find("greenBayPackersinfo").each(function(){
                 $("#rb").append("<li>" + "the GreenBay Packers are in the" $(this).find(“divison”).text() + "</br>" 
                 + "the GreenBay Packers are owned by" +  $(this).find(“owner”).text() + "</br>" 
                 + "the GreenBay Packers were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
@@ -297,7 +297,7 @@
                 datatype:"xml", 
                 success: function(xml){
                 $( "#rb" ).html("<ul>\n");
-                $(xml).find("DetroitLionsinfo").each(function(){
+                $(xml).find("detroitLionsinfo").each(function(){
                 $("#rb").append("<li>" + "the Detroit Lions are in the" $(this).find(“divison”).text() + "</br>" 
                 + "the Detroit Lions are owned by" +  $(this).find(“owner”).text() + "</br>" 
                 + "the Detroit Lions were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
