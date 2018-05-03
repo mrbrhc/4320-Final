@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            .btn-group button {
+                background-color: darkblue; /* Green background */
+                border: 1px solid green; /* Green border */
+                color: white; /* White text */
+                padding: 10px 24px; /* Some padding */
+                cursor: pointer; /* Pointer/hand icon */
+                width: 60%; /* Set a width if needed */
+                display: block; /* Make the buttons appear below each other */
+/*                float: left;*/
+            }
+
+            .btn-group button:not(:last-child) {
+                border-bottom: none; /* Prevent double borders */
+            }
+
+            /* Add a background color on hover */
+            .btn-group button:hover {
+                background-color: darkred;
+            }
+            
+            .ajaxWindow {
+                background-color: goldenrod;
+/*              
+                width: 45%;
+                height: 50%;
+*/
+                text-align: center;
+                
+            }
+            
+            .clearfix {
+                background-color: gray;
+                
+            }
+            
+            .clearfix:after {
+                content: "."; 
+                visibility: hidden; 
+                display: block; 
+                height: 0; 
+                clear: both;
+            }
+            
+            #interface{
+                float: left;
+                
+            }
+            
+          
+            
+        </style>
+        <script>
+        	
+			function getArizonaCardinals(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/xml/ArizonaCardinals.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("arizonaCardinalsinfo").each(function(){
+                			$("#rb").append("<li>" + "the Arizona Cardinals are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the Arizona Cardinals are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the Arizona Cardinals were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the Arizona Cardinals overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the Arizona Cardinals rivals are" + $(this).find(“rivals”).text() + "</br>"
+                			+ "the Arizona Cardinals stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Arizona Cardinals have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the Arizona Cardinals have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the Arizona Cardinals Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+			
+			function getAtlantaFalcons(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/xml/AtlantaFalcons.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("atlantaFalconsinfo").each(function(){
+                			$("#rb").append("<li>" + "the Atlanta Falcons are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the Atlanta Falcons are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the Atlanta Falcons were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the Atlanta Falcons overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the Atlanta Falcons rivals are" + $(this).find("rivals").text() + "</br>"
+                			+ "the Atlanta Falcons stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Atlanta Falcons have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the Atlanta Falcons have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the Atlanta Falcons Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+			
+			
+        </script>
+        <title>
+        </title>
+    </head>
+    <body>
+       <div class= "clearfix" id="wrapper">    
+            <div class="btn-group" id="interface">
+                <button>Arizona Cardinals</button>
+                <button>Atlanta Falcons</button>
+                <button>Baltimore Ravens</button>
+                <button>Buffalo Bills</button>
+                <button>Carolina Panthers</button>
+                <button>Chicago Bears</button>
+                <button>Cincinnati Bengals</button>
+                <button>Cleveland Browns</button>
+                <button>Dallas Cowboys</button>
+                <button>Denver Broncos</button>
+                <button>Detroit Lions</button>
+                <button>Green Bay Packers</button>
+                <button>Houston Texans</button>
+                <button>Indianapolis Colts</button>
+                <button>Jacksonville Jaguars</button>
+                <button>Kansas City Chiefs</button>
+                <button>Los Angeles Chargers</button>
+                <button>Los Angeles Rams</button>
+                <button>Miami Dolphins</button>
+                <button>Minnesota Vikings</button>
+                <button>New England Patriots</button>
+                <button>New Orleans Saints</button>
+                <button>New York Giants</button>
+                <button>New York Jets</button>
+                <button>Oakland Raiders</button>
+                <button>Philadelphia Eagles</button>
+                <button>Pittsburgh Steelers</button>
+                <button>San Francisco 49ers</button>
+                <button>Seattle Seahawks</button>
+                <button>Tampa Bay Buccaneers</button>
+                <button>Tennessee Titans</button>
+                <button>Washington Redskins</button>
+            </div>  <!--end button div -->
+           <div class = "ajaxWindow" id="rb">
+            <h1>ajax window</h1>
+           </div><!--end ajax window -->
+        </div> <!--end wrapper -->
+    </body>
+</html>
