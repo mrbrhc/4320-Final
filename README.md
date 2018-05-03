@@ -6,6 +6,7 @@ Project: NFL Fan Page
 
 [WebApp URL](http://72.14.185.133/php/login_form.php)
 
+[index URL](http://72.14.185.133/4320-Final-master/html/INDEX.html) for testing only
 
 ADD URL TO WEBAPP URL,
 Data base cred needs to be filled on db.php
