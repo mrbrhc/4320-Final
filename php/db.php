@@ -1,6 +1,6 @@
 <?php
     //db credientials need to be added
-    $servername = getenv('sql203.epizy.com');
+    $servername = getenv('sql203.byetcluster.com');
     $dbusername = getenv('epiz_22029092');
     $dbpassword = "mrbrhc";
     $database = "epiz_22029092_4320final";
