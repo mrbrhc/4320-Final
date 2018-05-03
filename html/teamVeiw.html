@@ -1,3 +1,17 @@
+<!-- <?php
+    
+    if(!session_start()){
+        header("Location: error.php");
+        exit;
+    }
+	
+	$loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
+	
+	if (!$loggedIn) {
+		header("Location: login.php");
+		exit;
+	} -->
+    
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -12,11 +26,9 @@
                 display: block; /* Make the buttons appear below each other */
 /*                float: left;*/
             }
-
             .btn-group button:not(:last-child) {
                 border-bottom: none; /* Prevent double borders */
             }
-
             /* Add a background color on hover */
             .btn-group button:hover {
                 background-color: darkred;
@@ -107,7 +119,6 @@
     			});
 			}
 			
-
 	function getNewOrleansSaints(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
@@ -153,7 +164,6 @@
                 			+ "the Baltimore Ravens have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
                 			+ "the Baltimore Ravens have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
                 			+ "the Baltimore Ravens Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
-
 							);
 						});
 						$("#rb").append("</ul>");
@@ -180,15 +190,12 @@
                 			+ "the Buffalo Bills have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
                 			+ "the Buffalo Bills have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
                 			+ "the Buffalo Bills Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
-
 							);
 						});
 						$("#rb").append("</ul>");
 					}
     			});
-
 			}
-
 				function getNewEnglandPatriots(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
@@ -213,7 +220,6 @@
 					$("#rb").append("</ul>");
 					}
     			});
-
 			}
 			
 			function getCarolinaPanthers(){
@@ -372,7 +378,6 @@
     			});
 			}
 			
-
 	function getGreenBayPackers(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
@@ -425,7 +430,6 @@
     	});
 	}
     
-
 	function getMinnesotaVikings(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
@@ -477,7 +481,6 @@
 					}
     			});
 			}
-
 	function getLosAngelesRams(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
@@ -691,6 +694,22 @@
         </title>
     </head>
     <body>
+    
+<nav>
+<ul>
+<table class="navbar">
+<tr>
+<td class="home"><li><a href="INDEX.html">Home</a></li></td>   
+<td class="history"><li><a href="history.html">History</a></li></td> 
+<td class="ppg"><li><a href="NFLhighlights.html">Highlights</a></li></td> 
+<td class="fs"><li><a href="teamVeiw.html">Team Viewer</a></li></td>
+<td class="li"><li><a href="login.php">Login In</a></li></td>        
+</tr>
+</table>
+</ul>        
+</nav>        
+    
+    
        <div class= "clearfix" id="wrapper">    
 
         <div class="btn-group" id="interface">
