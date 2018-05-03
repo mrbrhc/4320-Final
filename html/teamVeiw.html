@@ -107,24 +107,17 @@
     			});
 			}
 			
-<<<<<<< HEAD
+
 	function getNewOrleansSaints(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
                 	url: “http://72.14.185.133/xml/NewOrleansSaints.XML”, 
-=======
-			function getBaltimoreRavens(){
-                document.getElementById("rb").innerHTML= "loading…";
-                $.ajax({
-                	url: “http://72.14.185.133/xml/BaltimoreRavens.XML”, 
->>>>>>> teamView
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-<<<<<<< HEAD
                 		$(xml).find("newOrleansSaints").each(function(){
-                			$("#rb").append("<li>" + “the New Orleans Saints are in the” $(this).find(“divison”).text() + "</br>" 
+                			$("#rb").append("<li>" + “the New Orleans Saints are in the” + $(this).find(“divison”).text() + "</br>" 
                 			+ "the New Orleans Saints are owned by" +  $(this).find(“owner”).text() + "</br>" 
                 			+ "the New Orleans Saints were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
                 			+ "</br>" 
@@ -133,8 +126,22 @@
                 			+ "the New Orleans Saints stadium name is" + $(this).find(“stadium_name”).text() + "</br>"
                 			+ "the New Orleans Saints have won" + $(this).find(“superbowls”).text() + " superbowls" + "</br>"
                 			+ "the New Orleans Saints have" + $(this).find(“HOF_number”).text() + "in the Hall of Fame" + "</br>"
-                			+ "the New Orleans Saints Hall of Famers are" + $(this).find(“HOF”).text() + "</br>" + "</li>" 
-=======
+                			+ "the New Orleans Saints Hall of Famers are" + $(this).find(“HOF”).text() + "</br>" + "</li>"
+					);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+					
+			function getBaltimoreRavens(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+					type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                	$( "#rb" ).html("<ul>\n");
+                	url: “http://72.14.185.133/xml/BaltimoreRavens.XML”,
                 		$(xml).find("baltimoreRavensinfo").each(function(){
                 			$("#rb").append("<li>" + "the Baltimore Ravens are in the" + $(this).find("divison").text() + "</br>" 
                 			+ "the Baltimore Ravens are owned by" +  $(this).find("owner").text() + "</br>" 
@@ -146,7 +153,7 @@
                 			+ "the Baltimore Ravens have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
                 			+ "the Baltimore Ravens have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
                 			+ "the Baltimore Ravens Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
->>>>>>> teamView
+
 							);
 						});
 						$("#rb").append("</ul>");
@@ -154,35 +161,15 @@
     			});
 			}
 			
-<<<<<<< HEAD
-	function getNewEnglandPatriots(){
-                document.getElementById("rb").innerHTML= "loading…";
-                $.ajax({
-                	url: “http://72.14.185.133/xml/NewEnglandPatriots.XML”, 
-=======
 			function getBuffaloBills(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/xml/BuffaloBills.XML”, 
->>>>>>> teamView
-                	type:"GET", 
+                	url: “http://72.14.185.133/xml/BuffaloBills.XML”,
+					type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
-                		$( "#rb" ).html("<ul>\n");
-<<<<<<< HEAD
-                		$(xml).find("newEnglandPatriots").each(function(){
-                			$("#rb").append("<li>" + “the Patriots are in the” $(this).find(“divison”).text() + "</br>" 
-                			+ "the New England Patriots are owned by" +  $(this).find(“owner”).text() + "</br>" 
-                			+ "the New England Patriots were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
-                			+ "</br>" 
-                			+ "the New England Patriots overall record is" + $(this).find(“record”).text() + "</br>"
-                			+ "the New England Patriots rivals are" + $(this).find(“rivals”).text() + "</br>"
-                			+ "the New England Patriots stadium name is" + $(this).find(“stadium_name”).text() + "</br>"
-                			+ "the New England Patriots have won" + $(this).find(“superbowls”).text() + " superbowls" + "</br>"
-                			+ "the New England Patriots have" + $(this).find(“HOF_number”).text() + "in the Hall of Fame" + "</br>"
-                			+ "the New England Patriots Hall of Famers are" + $(this).find(“HOF”).text() + "</br>" + "</li>" 
-=======
-                		$(xml).find("buffaloBillsinfo").each(function(){
+                	$( "#rb" ).html("<ul>\n");
+					 $(xml).find("buffaloBillsinfo").each(function(){
                 			$("#rb").append("<li>" + "the Buffalo Bills are in the" + $(this).find("divison").text() + "</br>" 
                 			+ "the Buffalo Bills are owned by" +  $(this).find("owner").text() + "</br>" 
                 			+ "the Buffalo Bills were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
@@ -193,15 +180,40 @@
                 			+ "the Buffalo Bills have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
                 			+ "the Buffalo Bills have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
                 			+ "the Buffalo Bills Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
->>>>>>> teamView
+
 							);
 						});
 						$("#rb").append("</ul>");
 					}
     			});
-<<<<<<< HEAD
-			}    
-=======
+
+			}
+
+				function getNewEnglandPatriots(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/xml/NewEnglandPatriots.XML”,
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("newEnglandPatriots").each(function(){
+                			$("#rb").append("<li>" + “the Patriots are in the” + $(this).find(“divison”).text() + "</br>" 
+                			+ "the New England Patriots are owned by" +  $(this).find(“owner”).text() + "</br>" 
+                			+ "the New England Patriots were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
+                			+ "</br>" 
+                			+ "the New England Patriots overall record is" + $(this).find(“record”).text() + "</br>"
+                			+ "the New England Patriots rivals are" + $(this).find(“rivals”).text() + "</br>"
+                			+ "the New England Patriots stadium name is" + $(this).find(“stadium_name”).text() + "</br>"
+                			+ "the New England Patriots have won" + $(this).find(“superbowls”).text() + " superbowls" + "</br>"
+                			+ "the New England Patriots have" + $(this).find(“HOF_number”).text() + "in the Hall of Fame" + "</br>"
+                			+ "the New England Patriots Hall of Famers are" + $(this).find(“HOF”).text() + "</br>" + "</li>" 
+						);
+					});
+					$("#rb").append("</ul>");
+					}
+    			});
+
 			}
 			
 			function getCarolinaPanthers(){
@@ -309,9 +321,6 @@
 			}
 			
 			
-    
->>>>>>> teamView
-
 	function getMinnesotaVikings(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
@@ -320,8 +329,8 @@
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("newEnglandPatriots").each(function(){
-                			$("#rb").append("<li>" + “the Vikings are in the” $(this).find(“divison”).text() + "</br>" 
+                		$(xml).find("minnesotaVikings").each(function(){
+                			$("#rb").append("<li>" + “the Vikings are in the” + $(this).find(“divison”).text() + "</br>" 
                 			+ "the Minnesota Vikings are owned by" +  $(this).find(“owner”).text() + "</br>" 
                 			+ "the Minnesota Vikings were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
                 			+ "</br>" 
@@ -347,7 +356,7 @@
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("miamiDolphins").each(function(){
-                			$("#rb").append("<li>" + “the Miami Dolphoins are in the” $(this).find(“divison”).text() + "</br>" 
+                			$("#rb").append("<li>" + “the Miami Dolphoins are in the” + $(this).find(“divison”).text() + "</br>" 
                 			+ "the Miami Dolphins are owned by" +  $(this).find(“owner”).text() + "</br>" 
                 			+ "the  Miami Dolphins were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
                 			+ "</br>" 
@@ -373,7 +382,7 @@
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("losAngelesRams").each(function(){
-                			$("#rb").append("<li>" + “the Rams are in the” $(this).find(“divison”).text() + "</br>" 
+                			$("#rb").append("<li>" + “the Rams are in the” + $(this).find(“divison”).text() + "</br>" 
                 			+ "the Los Angeles Rams are owned by" +  $(this).find(“owner”).text() + "</br>" 
                 			+ "the Los Angeles Rams were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
                 			+ "</br>" 
@@ -399,7 +408,7 @@
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("losAngelesChargers").each(function(){
-                			$("#rb").append("<li>" + “the Chargers are in the” $(this).find(“divison”).text() + "</br>" 
+                			$("#rb").append("<li>" + “the Chargers are in the” + $(this).find(“divison”).text() + "</br>" 
                 			+ "the Los Angeles Chargers are owned by" +  $(this).find(“owner”).text() + "</br>" 
                 			+ "the Los Angeles Chargers were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
                 			+ "</br>" 
@@ -425,7 +434,7 @@
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("kansasCityChiefs").each(function(){
-                			$("#rb").append("<li>" + “the Chiefs are in the” $(this).find(“divison”).text() + "</br>" 
+                			$("#rb").append("<li>" + “the Chiefs are in the” + $(this).find(“divison”).text() + "</br>" 
                 			+ "the Kansas City Chiefs are owned by" +  $(this).find(“owner”).text() + "</br>" 
                 			+ "the Kansas City Chiefs were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
                 			+ "</br>" 
@@ -451,7 +460,7 @@
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("jacksonvilleJaguars").each(function(){
-                			$("#rb").append("<li>" + “the Jaguars are in the” $(this).find(“divison”).text() + "</br>" 
+                			$("#rb").append("<li>" + “the Jaguars are in the” + $(this).find(“divison”).text() + "</br>" 
                 			+ "the Jacksonville Jaguars are owned by" +  $(this).find(“owner”).text() + "</br>" 
                 			+ "the Jacksonville Jaguars were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
                 			+ "</br>" 
@@ -477,7 +486,7 @@
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("denverBroncos").each(function(){
-                			$("#rb").append("<li>" + “the Broncos are in the” $(this).find(“divison”).text() + "</br>" 
+                			$("#rb").append("<li>" + “the Broncos are in the” + $(this).find(“divison”).text() + "</br>" 
                 			+ "the Denver Broncos are owned by" +  $(this).find(“owner”).text() + "</br>" 
                 			+ "the Denver Broncos were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
                 			+ "</br>" 
@@ -503,7 +512,7 @@
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("dallasCowboys").each(function(){
-                			$("#rb").append("<li>" + “the Cowboys are in the” $(this).find(“divison”).text() + "</br>" 
+                			$("#rb").append("<li>" + “the Cowboys are in the” + $(this).find(“divison”).text() + "</br>" 
                 			+ "the Dallas Cowboys are owned by" +  $(this).find(“owner”).text() + "</br>" 
                 			+ "the Dallas Cowboys were introduced into the NFL in the year" + $(this).find(“year_introduced”).text() 
                 			+ "</br>" 
