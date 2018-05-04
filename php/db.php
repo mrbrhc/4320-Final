@@ -1,7 +1,7 @@
 <?php
     //db credientials need to be added
-    $servername = getenv('localhost');
-    $dbusername = getenv('4320nfl');
+    $servername = "localhost";
+    $dbusername = "4320nfl";
     $dbpassword = "4320nfl";
     $database = "4320nfl";
     $dbport = 3306;
