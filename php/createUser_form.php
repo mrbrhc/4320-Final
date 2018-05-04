@@ -51,7 +51,7 @@
             
             <div class="stack">
                 <label for="confirmPassword">Confirm Password:</label>
-                <input type="confirmPassword" id="confirmPassword" name="confirmPassword">
+                <input type="confirmPassword" id="confirmPassword" type="password" name="confirmPassword">
             </div>
             
             <div class="stack">
