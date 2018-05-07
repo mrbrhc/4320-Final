@@ -651,6 +651,266 @@
 					}
     			});
 			}
+			
+	function getNewYorkGiants(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/4320-Final-master/xml/NewYorkGiants.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("newYorkGiants").each(function(){
+                			$("#rb").append("<li>" + "the New York Giants are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the New York Giants are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the New York Giants were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the New York Giants overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the New York Giants rivals are" + $(this).find("rivals").text() + "</br>"
+                			+ "the New York Giants stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the New York Giants have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the New York Giants have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the New York Giants Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+			
+	function getNewYorkJets(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/4320-Final-master/xml/NewYorkJets.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("newYorkJets").each(function(){
+                			$("#rb").append("<li>" + "the New York Jets are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the New York Jets are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the New York Jets were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the New York Jets overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the New York Jets rivals are" + $(this).find("rivals").text() + "</br>"
+                			+ "the New York Jets stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the New York Jets have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the New York Jets have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the New York Jets Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+			
+	function getOaklandRaiders(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/4320-Final-master/xml/OaklandRaiders.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("oaklandRaiders").each(function(){
+                			$("#rb").append("<li>" + "the Oakland Raiders are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the Oakland Raiders are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the Oakland Raiders were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the Oakland Raiders overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the Oakland Raiders rivals are" + $(this).find("rivals").text() + "</br>"
+                			+ "the Oakland Raiders stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Oakland Raiders have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the Oakland Raiders have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the Oakland Raiders Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+			
+	function getPhiladelphiaEagles(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/4320-Final-master/xml/PhiladelphiaEagles.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("philadelphiaEagles").each(function(){
+                			$("#rb").append("<li>" + "the Philadelphia Eagles are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the Philadelphia Eagles are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the Philadelphia Eagles were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the Philadelphia Eagles overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the Philadelphia Eagles rivals are" + $(this).find("rivals").text() + "</br>"
+                			+ "the Philadelphia Eagles stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Philadelphia Eagles have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the Philadelphia Eagles have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the Philadelphia Eagles Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+			
+	function getPittsburghSteelers(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/4320-Final-master/xml/PittsburghSteelers.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("pittsburghSteelers").each(function(){
+                			$("#rb").append("<li>" + "the Pittsburgh Steelers are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the Pittsburgh Steelers are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the Pittsburgh Steelers were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the Pittsburgh Steelers overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the Pittsburgh Steelers rivals are" + $(this).find("rivals").text() + "</br>"
+                			+ "the Pittsburgh Steelers stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Pittsburgh Steelers have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the Pittsburgh Steelers have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the Pittsburgh Steelers Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+			
+	function getSanFrancisco49ers(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/4320-Final-master/xml/SanFrancisco49ers.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("sanFrancisco49ers").each(function(){
+                			$("#rb").append("<li>" + "the San Francisco 49ers are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the San Francisco 49ers are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the San Francisco 49ers were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the San Francisco 49ers overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the San Francisco 49ers rivals are" + $(this).find("rivals").text() + "</br>"
+                			+ "the San Francisco 49ers stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the San Francisco 49ers have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the San Francisco 49ers have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the San Francisco 49ers Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+			
+	function getSeattleSeahawks(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/4320-Final-master/xml/SeattleSeahawks.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("seattleSeahawks").each(function(){
+                			$("#rb").append("<li>" + "the Seattle Seahawks  are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the Seattle Seahawks are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the Seattle Seahawks were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the Seattle Seahawks overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the Seattle Seahawks rivals are" + $(this).find("rivals").text() + "</br>"
+                			+ "the Seattle Seahawks stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Seattle Seahawks have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the Seattle Seahawks have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the Seattle Seahawks Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+			
+	function getTampaBayBuccaneers(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/4320-Final-master/xml/TampaBayBuccaneers.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("tampaBayBuccaneers").each(function(){
+                			$("#rb").append("<li>" + "the Tampa Bay Buccaneers are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the Tampa Bay Buccaneers are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the Tampa Bay Buccaneers were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the Tampa Bay Buccaneers overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the Tampa Bay Buccaneers rivals are" + $(this).find("rivals").text() + "</br>"
+                			+ "the Tampa Bay Buccaneers stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Tampa Bay Buccaneers have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the Tampa Bay Buccaneers have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the Tampa Bay Buccaneers Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+			
+	function getTennesseeTitans(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/4320-Final-master/xml/TennesseeTitans.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("tennesseeTitans").each(function(){
+                			$("#rb").append("<li>" + "the Tennessee Titans are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the Tennessee Titans are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the Tennessee Titans were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the Tennessee Titans overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the Tennessee Titans rivals are" + $(this).find("rivals").text() + "</br>"
+                			+ "the Tennessee Titans stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Tennessee Titans have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the Tennessee Titans have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the Tennessee Titans Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
+			
+	function getWashingtonRedskins(){
+                document.getElementById("rb").innerHTML= "loading…";
+                $.ajax({
+                	url: “http://72.14.185.133/4320-Final-master/xml/WashingtonRedskins.XML”, 
+                	type:"GET", 
+                	datatype:"xml", 
+                	success: function(xml){
+                		$( "#rb" ).html("<ul>\n");
+                		$(xml).find("washingtonRedskins").each(function(){
+                			$("#rb").append("<li>" + "the Washington Redskins are in the" + $(this).find("divison").text() + "</br>" 
+                			+ "the Washington Redskins are owned by" +  $(this).find("owner").text() + "</br>" 
+                			+ "the Washington Redskins were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			+ "</br>" 
+                			+ "the Washington Redskins overall record is" + $(this).find("record").text() + "</br>"
+                			+ "the Washington Redskins rivals are" + $(this).find("rivals").text() + "</br>"
+                			+ "the Washington Redskins stadium name is" + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Washington Redskins have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                			+ "the Washington Redskins have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
+                			+ "the Washington Redskins Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+							);
+						});
+						$("#rb").append("</ul>");
+					}
+    			});
+			}
             
    
             
