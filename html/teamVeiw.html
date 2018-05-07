@@ -17,7 +17,7 @@
     <head>
         <style>
             .btn-group button {
-                background-color: darkblue; /* Green background */
+                background-color: darkblue; /* blue background */
                 border: 1px solid green; /* Green border */
                 color: white; /* White text */
                 padding: 10px 24px; /* Some padding */
@@ -80,27 +80,29 @@
     }
             
         </style>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
                 
             function getArizonaCardinals(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/ArizonaCardinals.XML”, 
-                	type:"GET", 
+					url: "http://72.14.185.133/4320-Final/xml/ArizonaCardinals.xml", 
+					type:"GET",
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("arizonaCardinalsinfo").each(function(){
-                			$("#rb").append("<li>" + "the Arizona Cardinals are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Arizona Cardinals are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Arizona Cardinals were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			$("#rb").append("<li>" + "the Arizona Cardinals are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Arizona Cardinals are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Arizona Cardinals were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Arizona Cardinals overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Arizona Cardinals rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Arizona Cardinals stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Arizona Cardinals have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Arizona Cardinals have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Arizona Cardinals Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Arizona Cardinals overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Arizona Cardinals rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Arizona Cardinals stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Arizona Cardinals have won " + $(this).find("superbowls").text() + " superbowls " + "</br>"
+                			+ "the Arizona Cardinals have " + $(this).find("HOF_number").text() + " in the Hall of Fame " + "</br>"
+                			+ "the Arizona Cardinals Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -111,22 +113,22 @@
 			function getAtlantaFalcons(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/AtlantaFalcons.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/AtlantaFalcons.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("atlantaFalconsinfo").each(function(){
-                			$("#rb").append("<li>" + "the Atlanta Falcons are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Atlanta Falcons are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Atlanta Falcons were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			$("#rb").append("<li>" + "the Atlanta Falcons are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Atlanta Falcons are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Atlanta Falcons were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Atlanta Falcons overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Atlanta Falcons rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Atlanta Falcons stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Atlanta Falcons have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Atlanta Falcons have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Atlanta Falcons Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Atlanta Falcons overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Atlanta Falcons rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Atlanta Falcons stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Atlanta Falcons have won " + $(this).find("superbowls").text() + " superbowls " + "</br>"
+                			+ "the Atlanta Falcons have " + $(this).find("HOF_number").text() + " in the Hall of Fame " + "</br>"
+                			+ "the Atlanta Falcons Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -137,22 +139,22 @@
 	function getNewOrleansSaints(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/NewOrleansSaints.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/NewOrleansSaints.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("newOrleansSaints").each(function(){
-                			$("#rb").append("<li>" + "the New Orleans Saints are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the New Orleans Saints are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the New Orleans Saints were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("newOrleansSaintsinfo").each(function(){
+                			$("#rb").append("<li>" + "the New Orleans Saints are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the New Orleans Saints are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the New Orleans Saints were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the New Orleans Saints overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the New Orleans Saints rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the New Orleans Saints stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the New Orleans Saints have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the New Orleans Saints have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the New Orleans Saints Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>"
+                			+ "the New Orleans Saints overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the New Orleans Saints rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the New Orleans Saints stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the New Orleans Saints have won " + $(this).find("superbowls").text() + " superbowls " + "</br>"
+                			+ "the New Orleans Saints have " + $(this).find("HOF_number").text() + " in the Hall of Fame " + "</br>"
+                			+ "the New Orleans Saints Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>"
 					);
 						});
 						$("#rb").append("</ul>");
@@ -164,21 +166,22 @@
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
 					type:"GET", 
+					url: "http://72.14.185.133/4320-Final/xml/BaltimoreRavens.xml",
                 	datatype:"xml", 
                 	success: function(xml){
                 	$( "#rb" ).html("<ul>\n");
-                	url: “http://72.14.185.133/4320-Final-master/xml/BaltimoreRavens.XML”,
+                	
                 		$(xml).find("baltimoreRavensinfo").each(function(){
-                			$("#rb").append("<li>" + "the Baltimore Ravens are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Baltimore Ravens are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Baltimore Ravens were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			$("#rb").append("<li>" + "the Baltimore Ravens are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Baltimore Ravens are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Baltimore Ravens were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Baltimore Ravens overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Baltimore Ravens rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Baltimore Ravens stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Baltimore Ravens have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Baltimore Ravens have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Baltimore Ravens Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Baltimore Ravens overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Baltimore Ravens rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Baltimore Ravens stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Baltimore Ravens have won " + $(this).find("superbowls").text() + " superbowls " + "</br>"
+                			+ "the Baltimore Ravens have " + $(this).find("HOF_number").text() + " in the Hall of Fame " + "</br>"
+                			+ "the Baltimore Ravens Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -189,22 +192,22 @@
 			function getBuffaloBills(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/BuffaloBills.XML”,
+                	url: "http://72.14.185.133/4320-Final/xml/BuffaloBills.xml",
 					type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 	$( "#rb" ).html("<ul>\n");
 					 $(xml).find("buffaloBillsinfo").each(function(){
-                			$("#rb").append("<li>" + "the Buffalo Bills are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Buffalo Bills are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Buffalo Bills were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			$("#rb").append("<li>" + "the Buffalo Bills are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Buffalo Bills are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Buffalo Bills were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Buffalo Bills overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Buffalo Bills rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Buffalo Bills stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Buffalo Bills have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Buffalo Bills have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Buffalo Bills Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Buffalo Bills overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Buffalo Bills rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Buffalo Bills stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Buffalo Bills have won " + $(this).find("superbowls").text() + "  superbowls " + "</br>"
+                			+ "the Buffalo Bills have " + $(this).find("HOF_number").text() + " in the Hall of Fame " + "</br>"
+                			+ "the Buffalo Bills Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -214,22 +217,22 @@
 				function getNewEnglandPatriots(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/NewEnglandPatriots.XML”,
+                	url: "http://72.14.185.133/4320-Final/xml/NewEnglandPatriots.xml",
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("newEnglandPatriots").each(function(){
-                			$("#rb").append("<li>" + “the Patriots are in the” + $(this).find("divison").text() + "</br>" 
-                			+ "the New England Patriots are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the New England Patriots were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("newEnglandPatriotsinfo").each(function(){
+                			$("#rb").append("<li>" + "the Patriots are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the New England Patriots are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the New England Patriots were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the New England Patriots overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the New England Patriots rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the New England Patriots stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the New England Patriots have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the New England Patriots have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the New England Patriots Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the New England Patriots overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the New England Patriots rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the New England Patriots stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the New England Patriots have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the New England Patriots have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the New England Patriots Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 						);
 					});
 					$("#rb").append("</ul>");
@@ -240,22 +243,22 @@
 			function getCarolinaPanthers(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/CarolinaPanthers.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/CarolinaPanthers.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("carolinaPanthersinfo").each(function(){
-                			$("#rb").append("<li>" + "the Carolina Panthers are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Carolina Panthers are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Carolina Panthers were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			$("#rb").append("<li>" + "the Carolina Panthers are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Carolina Panthers are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Carolina Panthers were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Carolina Panthers overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Carolina Panthers rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Carolina Panthers stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Carolina Panthers have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Carolina Panthers have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Carolina Panthers Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Carolina Panthers overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Carolina Panthers rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Carolina Panthers stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Carolina Panthers have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Carolina Panthers have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Carolina Panthers Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -266,22 +269,22 @@
 			function getChicagoBears(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/ChicagoBears.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/ChicagoBears.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("chicagoBearsinfo").each(function(){
-                			$("#rb").append("<li>" + "the Chicago Bears are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Chicago Bears are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Chicago Bears were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			$("#rb").append("<li>" + "the Chicago Bears are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Chicago Bears are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Chicago Bears were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Chicago Bears overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Chicago Bears rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Chicago Bears stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Chicago Bears have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Chicago Bears have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Chicago Bears Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Chicago Bears overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Chicago Bears rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Chicago Bears stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Chicago Bears have won " + $(this).find("superbowls").text() + "  superbowls " + "</br>"
+                			+ "the Chicago Bears have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Chicago Bears Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -292,22 +295,22 @@
 			function getCincinnatiBengals(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/CincinnatiBengals.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/CincinattiBengals.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("cincinnatiBengalsinfo").each(function(){
-                			$("#rb").append("<li>" + "the Cincinnati Bengals are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Cincinnati Bengals are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Cincinnati Bengals were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			$("#rb").append("<li>" + "the Cincinnati Bengals are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Cincinnati Bengals are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Cincinnati Bengals were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Cincinnati Bengals overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Cincinnati Bengals rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Cincinnati Bengals stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Cincinnati Bengals have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Cincinnati Bengals have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Cincinnati Bengals Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Cincinnati Bengals overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Cincinnati Bengals rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Cincinnati Bengals stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Cincinnati Bengals have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Cincinnati Bengals have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Cincinnati Bengals Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -318,22 +321,22 @@
 			function getClevelandBrowns(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/ClevelandBrowns.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/ClevelandBrowns.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
                 		$(xml).find("clevelandBrownsinfo").each(function(){
-                			$("#rb").append("<li>" + "the Cleveland Browns are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Cleveland Browns are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Cleveland Browns were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                			$("#rb").append("<li>" + "the Cleveland Browns are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Cleveland Browns are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Cleveland Browns were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Cleveland Browns overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Cleveland Browns rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Cleveland Browns stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Cleveland Browns have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Cleveland Browns have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Cleveland Browns Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Cleveland Browns overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Cleveland Browns rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Cleveland Browns stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Cleveland Browns have won " + $(this).find("superbowls").text() + " superbowls " + "</br>"
+                			+ "the Cleveland Browns have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Cleveland Browns Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -342,24 +345,24 @@
 			}
             
             function getIndianapolisColts(){
-                document.getElementByIndianapolisColts("rb").innerHTML= "loading…";
+                document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/IndianapolisColts.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/IndianapolisColts.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("indianapolisColts").each(function(){
-                			$("#rb").append("<li>" + "the Indianapolis Colts are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Indianapolis Colts are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Indianapolis Colts were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("indianapolisColtsinfo").each(function(){
+                			$("#rb").append("<li>" + "the Indianapolis Colts are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Indianapolis Colts are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Indianapolis Colts were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Indianapolis Colts overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Indianapolis Colts rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Indianapolis Colts stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Indianapolis Colts have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Indianapolis Colts have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Indianapolis Colts Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Indianapolis Colts overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Indianapolis Colts rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Indianapolis Colts stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Indianapolis Colts have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Indianapolis Colts have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Indianapolis Colts Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -367,25 +370,25 @@
     			});
 			}
             
-             function getHoustonTexans
-                document.getElementByHoustonTexans("rb").innerHTML= "loading…";
+             function getHoustonTexans(){
+                document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/HoustonTexans.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/HoustonTexans.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("houstonTexans").each(function(){
-                			$("#rb").append("<li>" + "the Houston Texans are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Houston Texans are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Houston Texans were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("houstonTexansinfo").each(function(){
+                			$("#rb").append("<li>" + "the Houston Texans are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Houston Texans are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Houston Texans were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Houston Texans overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Houston Texans rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Houston Texans stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Houston Texans have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Houston Texans have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Houston Texans Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Houston Texans overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Houston Texans rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Houston Texans stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Houston Texans have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Houston Texans have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Houston Texans Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -396,22 +399,22 @@
 	function getGreenBayPackers(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                url: “http://72.14.185.133/4320-Final-master/xml/GreenBayPackers.XML”, 
+                url: "http://72.14.185.133/4320-Final/xml/GreenBayPackers.xml", 
                 type:"GET", 
                 datatype:"xml", 
                 success: function(xml){
                 $( "#rb" ).html("<ul>\n");
                 $(xml).find("greenBayPackersinfo").each(function(){
-                $("#rb").append("<li>" + "the GreenBay Packers are in the" + $(this).find("divison").text() + "</br>" 
-                + "the GreenBay Packers are owned by" +  $(this).find("owner").text() + "</br>" 
-                + "the GreenBay Packers were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                $("#rb").append("<li>" + "the Green Bay Packers are in the " + $(this).find("divison").text() + "</br>" 
+                + "the GreenBay Packers are owned by " +  $(this).find("owner").text() + "</br>" 
+                + "the GreenBay Packers were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 + "</br>" 
-                + "the GreenBay Packers overall record is" + $(this).find("record").text() + "</br>"
-                + "the GreenBay Packers rivals are" + $(this).find("rivals").text() + "</br>"
-                + "the GreenBay Packers stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                + "the GreenBay Packers have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                + "the GreenBay Packers have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                + "the GreenBay Packers Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                + "the Green Bay Packers overall record is " + $(this).find("record").text() + "</br>"
+                + "the Green Bay Packers rivals are " + $(this).find("rivals").text() + "</br>"
+                + "the Green Bay Packers stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                + "the Green Bay Packers have won " + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                + "the Green Bay Packers have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                + "the GreenBay Packers Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 	);
 	});
 	$("#rb").append("</ul>");
@@ -422,22 +425,22 @@
     function getDetroitLions(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                url: “http://72.14.185.133/4320-Final-master/xml/DetroitLions.XML”, 
+                url: "http://72.14.185.133/4320-Final/xml/DetroitLions.xml", 
                 type:"GET", 
                 datatype:"xml", 
                 success: function(xml){
                 $( "#rb" ).html("<ul>\n");
                 $(xml).find("detroitLionsinfo").each(function(){
-                $("#rb").append("<li>" + "the Detroit Lions are in the" + $(this).find("divison").text() + "</br>" 
-                + "the Detroit Lions are owned by" +  $(this).find("owner").text() + "</br>" 
-                + "the Detroit Lions were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                $("#rb").append("<li>" + "the Detroit Lions are in the " + $(this).find("divison").text() + "</br>" 
+                + "the Detroit Lions are owned by " +  $(this).find("owner").text() + "</br>" 
+                + "the Detroit Lions were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 + "</br>" 
-                + "the Detroit Lions overall record is" + $(this).find("record").text() + "</br>"
-                + "the Detroit Lions rivals are" + $(this).find("rivals").text() + "</br>"
-                + "the Detroit Lions stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                + "the Detroit Lions have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                + "the Detroit Lions have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                + "the Detroit Lions Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                + "the Detroit Lions overall record is " + $(this).find("record").text() + "</br>"
+                + "the Detroit Lions rivals are " + $(this).find("rivals").text() + "</br>"
+                + "the Detroit Lions stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                + "the Detroit Lions have won " + $(this).find("superbowls").text() + " superbowls" + "</br>"
+                + "the Detroit Lions have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                + "the Detroit Lions Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 	);
 	});
 	$("#rb").append("</ul>");
@@ -448,22 +451,22 @@
 	function getMinnesotaVikings(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/MinnesotaVikings.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/MinnesotaVikings.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("minnesotaVikings").each(function(){
-                			$("#rb").append("<li>" + "the Vikings are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Minnesota Vikings are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Minnesota Vikings were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("minnesotaVikingsinfo").each(function(){
+                			$("#rb").append("<li>" + "the Vikings are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Minnesota Vikings are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Minnesota Vikings were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Minnesota Vikings overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Minnesota Vikings rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Minnesota Vikings stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Minnesota Vikings have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Minnesota Vikings have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Minnesota Vikings Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Minnesota Vikings overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Minnesota Vikings rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Minnesota Vikings stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Minnesota Vikings have won " + $(this).find("superbowls").text() + "  superbowls " + "</br>"
+                			+ "the Minnesota Vikings have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Minnesota Vikings Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -474,22 +477,22 @@
 	function getMiamiDolphins(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/xml/4320-Final-master/MiamiDolphins.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/MiamiDolphins.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("miamiDolphins").each(function(){
-                			$("#rb").append("<li>" + "the Miami Dolphoins are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Miami Dolphins are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the  Miami Dolphins were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("miamiDolphinsinfo").each(function(){
+                			$("#rb").append("<li>" + "the Miami Dolphoins are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Miami Dolphins are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the  Miami Dolphins were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the  Miami Dolphins overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the  Miami Dolphins rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the  Miami Dolphins stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the  Miami Dolphins have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the  Miami Dolphins have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the  Miami Dolphins Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the  Miami Dolphins overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the  Miami Dolphins rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the  Miami Dolphins stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the  Miami Dolphins have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the  Miami Dolphins have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the  Miami Dolphins Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -499,22 +502,22 @@
 	function getLosAngelesRams(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/LosAngelesRams.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/LosAngelesRams.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("losAngelesRams").each(function(){
-                			$("#rb").append("<li>" + "the Rams are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Los Angeles Rams are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Los Angeles Rams were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("losAngelesRamsinfo").each(function(){
+                			$("#rb").append("<li>" + "the Rams are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Los Angeles Rams are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Los Angeles Rams were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Los Angeles Rams overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Los Angeles Rams rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Los Angeles Rams stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Los Angeles Rams have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Los Angeles Rams have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Los Angeles Rams Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Los Angeles Rams overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Los Angeles Rams rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Los Angeles Rams stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Los Angeles Rams have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Los Angeles Rams have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Los Angeles Rams Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -525,22 +528,22 @@
 	function getLosAngelesChargers(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/LosAngelesChargers.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/LosAngelesChargers.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("losAngelesChargers").each(function(){
-                			$("#rb").append("<li>" + "the Chargers are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Los Angeles Chargers are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Los Angeles Chargers were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("losAngelesChargersinfo").each(function(){
+                			$("#rb").append("<li>" + "the Chargers are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Los Angeles Chargers are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Los Angeles Chargers were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Los Angeles Chargers overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Los Angeles Chargers rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Los Angeles Chargers stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Los Angeles Chargers have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Los Angeles Chargers have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Los Angeles Chargers Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Los Angeles Chargers overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Los Angeles Chargers rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Los Angeles Chargers stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Los Angeles Chargers have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Los Angeles Chargers have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Los Angeles Chargers Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -551,22 +554,22 @@
 	function getKansasCityChiefs(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/KansasCityChiefs.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/KansasCityChiefs.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("kansasCityChiefs").each(function(){
-                			$("#rb").append("<li>" + "the Chiefs are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Kansas City Chiefs are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Kansas City Chiefs were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("kansasCityChiefsinfo").each(function(){
+                			$("#rb").append("<li>" + "the Chiefs are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Kansas City Chiefs are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Kansas City Chiefs were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Kansas City Chiefs overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Kansas City Chiefs rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Kansas City Chiefs stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Kansas City Chiefs have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Kansas City Chiefs have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Kansas City Chiefs Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Kansas City Chiefs overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Kansas City Chiefs rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Kansas City Chiefs stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Kansas City Chiefs have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Kansas City Chiefs have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Kansas City Chiefs Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -577,22 +580,22 @@
 	function getJacksonvilleJaguars(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/JacksonvilleJaguars.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/JacksonvilleJaguars.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("jacksonvilleJaguars").each(function(){
-                			$("#rb").append("<li>" + "the Jaguars are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Jacksonville Jaguars are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Jacksonville Jaguars were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("jacksonvilleJaguarsinfo").each(function(){
+                			$("#rb").append("<li>" + "the Jaguars are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Jacksonville Jaguars are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Jacksonville Jaguars were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Jacksonville Jaguars overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Jacksonville Jaguars rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Jacksonville Jaguars stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Jacksonville Jaguars have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Jacksonville Jaguars have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Jacksonville Jaguars Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Jacksonville Jaguars overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Jacksonville Jaguars rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Jacksonville Jaguars stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Jacksonville Jaguars have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Jacksonville Jaguars have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Jacksonville Jaguars Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -603,22 +606,22 @@
 	function getDenverBroncos(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/DenverBroncos.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/DenverBroncos.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("denverBroncos").each(function(){
-                			$("#rb").append("<li>" + "the Broncos are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Denver Broncos are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Denver Broncos were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("denverBroncosinfo").each(function(){
+                			$("#rb").append("<li>" + "the Broncos are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Denver Broncos are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Denver Broncos were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Denver Broncos overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Denver Broncos rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Denver Broncos stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Denver Broncos have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Denver Broncos have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Denver Broncos Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Denver Broncos overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Denver Broncos rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Denver Broncos stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Denver Broncos have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Denver Broncos have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Denver Broncos Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -629,22 +632,22 @@
 	function getDallasCowboys(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/DallasCowboys.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/DallasCowboys.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("dallasCowboys").each(function(){
-                			$("#rb").append("<li>" + "the Cowboys are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Dallas Cowboys are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Dallas Cowboys were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("dallasCowboysinfo").each(function(){
+                			$("#rb").append("<li>" + "the Cowboys are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Dallas Cowboys are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Dallas Cowboys were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Dallas Cowboys overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Dallas Cowboys rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Dallas Cowboys stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Dallas Cowboys have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Dallas Cowboys have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Dallas Cowboys Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Dallas Cowboys overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Dallas Cowboys rivals are "  + $(this).find("rivals").text() + "</br>"
+                			+ "the Dallas Cowboys stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Dallas Cowboys have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Dallas Cowboys have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Dallas Cowboys Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -655,22 +658,22 @@
 	function getNewYorkGiants(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/NewYorkGiants.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/NewYorkGiants.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("newYorkGiants").each(function(){
-                			$("#rb").append("<li>" + "the New York Giants are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the New York Giants are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the New York Giants were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("newYorkGiantsinfo").each(function(){
+                			$("#rb").append("<li>" + "the New York Giants are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the New York Giants are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the New York Giants were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the New York Giants overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the New York Giants rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the New York Giants stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the New York Giants have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the New York Giants have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the New York Giants Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the New York Giants overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the New York Giants rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the New York Giants stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the New York Giants have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the New York Giants have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the New York Giants Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -681,22 +684,22 @@
 	function getNewYorkJets(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/NewYorkJets.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/NewYorkJets.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("newYorkJets").each(function(){
-                			$("#rb").append("<li>" + "the New York Jets are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the New York Jets are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the New York Jets were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("newYorkJetsinfo").each(function(){
+                			$("#rb").append("<li>" + "the New York Jets are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the New York Jets are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the New York Jets were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the New York Jets overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the New York Jets rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the New York Jets stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the New York Jets have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the New York Jets have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the New York Jets Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the New York Jets overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the New York Jets rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the New York Jets stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the New York Jets have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the New York Jets have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the New York Jets Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -707,22 +710,22 @@
 	function getOaklandRaiders(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/OaklandRaiders.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/OaklandRaiders.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("oaklandRaiders").each(function(){
-                			$("#rb").append("<li>" + "the Oakland Raiders are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Oakland Raiders are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Oakland Raiders were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("oaklandRaidersinfo").each(function(){
+                			$("#rb").append("<li>" + "the Oakland Raiders are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Oakland Raiders are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Oakland Raiders were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Oakland Raiders overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Oakland Raiders rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Oakland Raiders stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Oakland Raiders have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Oakland Raiders have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Oakland Raiders Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Oakland Raiders overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Oakland Raiders rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Oakland Raiders stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Oakland Raiders have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Oakland Raiders have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Oakland Raiders Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -733,22 +736,22 @@
 	function getPhiladelphiaEagles(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/PhiladelphiaEagles.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/PhiladelphiaEagles.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("philadelphiaEagles").each(function(){
-                			$("#rb").append("<li>" + "the Philadelphia Eagles are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Philadelphia Eagles are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Philadelphia Eagles were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("philadelphiaEaglesinfo").each(function(){
+                			$("#rb").append("<li>" + "the Philadelphia Eagles are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Philadelphia Eagles are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Philadelphia Eagles were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Philadelphia Eagles overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Philadelphia Eagles rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Philadelphia Eagles stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Philadelphia Eagles have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Philadelphia Eagles have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Philadelphia Eagles Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Philadelphia Eagles overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Philadelphia Eagles rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Philadelphia Eagles stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Philadelphia Eagles have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Philadelphia Eagles have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Philadelphia Eagles Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -759,22 +762,22 @@
 	function getPittsburghSteelers(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/PittsburghSteelers.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/PittsburghSteelers.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("pittsburghSteelers").each(function(){
-                			$("#rb").append("<li>" + "the Pittsburgh Steelers are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Pittsburgh Steelers are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Pittsburgh Steelers were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("pittsburghSteelersinfo").each(function(){
+                			$("#rb").append("<li>" + "the Pittsburgh Steelers are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Pittsburgh Steelers are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Pittsburgh Steelers were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Pittsburgh Steelers overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Pittsburgh Steelers rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Pittsburgh Steelers stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Pittsburgh Steelers have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Pittsburgh Steelers have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Pittsburgh Steelers Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Pittsburgh Steelers overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Pittsburgh Steelers rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Pittsburgh Steelers stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Pittsburgh Steelers have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Pittsburgh Steelers have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Pittsburgh Steelers Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -785,22 +788,22 @@
 	function getSanFrancisco49ers(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/SanFrancisco49ers.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/SanFrancisco49ers.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("sanFrancisco49ers").each(function(){
-                			$("#rb").append("<li>" + "the San Francisco 49ers are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the San Francisco 49ers are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the San Francisco 49ers were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("sanFrancisco49ersinfo").each(function(){
+                			$("#rb").append("<li>" + "the San Francisco 49ers are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the San Francisco 49ers are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the San Francisco 49ers were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the San Francisco 49ers overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the San Francisco 49ers rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the San Francisco 49ers stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the San Francisco 49ers have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the San Francisco 49ers have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the San Francisco 49ers Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the San Francisco 49ers overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the San Francisco 49ers rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the San Francisco 49ers stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the San Francisco 49ers have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the San Francisco 49ers have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the San Francisco 49ers Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -811,22 +814,22 @@
 	function getSeattleSeahawks(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/SeattleSeahawks.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/SeattleSeahawks.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("seattleSeahawks").each(function(){
-                			$("#rb").append("<li>" + "the Seattle Seahawks  are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Seattle Seahawks are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Seattle Seahawks were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("seattleSeahawksinfo").each(function(){
+                			$("#rb").append("<li>" + "the Seattle Seahawks are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Seattle Seahawks are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Seattle Seahawks were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Seattle Seahawks overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Seattle Seahawks rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Seattle Seahawks stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Seattle Seahawks have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Seattle Seahawks have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Seattle Seahawks Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Seattle Seahawks overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Seattle Seahawks rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Seattle Seahawks stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Seattle Seahawks have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Seattle Seahawks have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Seattle Seahawks Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -837,22 +840,22 @@
 	function getTampaBayBuccaneers(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/TampaBayBuccaneers.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/TampaBayBuccaneers.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("tampaBayBuccaneers").each(function(){
-                			$("#rb").append("<li>" + "the Tampa Bay Buccaneers are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Tampa Bay Buccaneers are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Tampa Bay Buccaneers were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("tampaBayBuccaneersinfo").each(function(){
+                			$("#rb").append("<li>" + "the Tampa Bay Buccaneers are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Tampa Bay Buccaneers are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Tampa Bay Buccaneers were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Tampa Bay Buccaneers overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Tampa Bay Buccaneers rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Tampa Bay Buccaneers stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Tampa Bay Buccaneers have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Tampa Bay Buccaneers have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Tampa Bay Buccaneers Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Tampa Bay Buccaneers overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Tampa Bay Buccaneers rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Tampa Bay Buccaneers stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Tampa Bay Buccaneers have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Tampa Bay Buccaneers have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Tampa Bay Buccaneers Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -863,22 +866,22 @@
 	function getTennesseeTitans(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/TennesseeTitans.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/TennesseeTitans.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("tennesseeTitans").each(function(){
-                			$("#rb").append("<li>" + "the Tennessee Titans are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Tennessee Titans are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Tennessee Titans were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("tennesseeTitansinfo").each(function(){
+                			$("#rb").append("<li>" + "the Tennessee Titans are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Tennessee Titans are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Tennessee Titans were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Tennessee Titans overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Tennessee Titans rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Tennessee Titans stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Tennessee Titans have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Tennessee Titans have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Tennessee Titans Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Tennessee Titans overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Tennessee Titans rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Tennessee Titans stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Tennessee Titans have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Tennessee Titans have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Tennessee Titans Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -889,22 +892,22 @@
 	function getWashingtonRedskins(){
                 document.getElementById("rb").innerHTML= "loading…";
                 $.ajax({
-                	url: “http://72.14.185.133/4320-Final-master/xml/WashingtonRedskins.XML”, 
+                	url: "http://72.14.185.133/4320-Final/xml/WashingtonRedskins.xml", 
                 	type:"GET", 
                 	datatype:"xml", 
                 	success: function(xml){
                 		$( "#rb" ).html("<ul>\n");
-                		$(xml).find("washingtonRedskins").each(function(){
-                			$("#rb").append("<li>" + "the Washington Redskins are in the" + $(this).find("divison").text() + "</br>" 
-                			+ "the Washington Redskins are owned by" +  $(this).find("owner").text() + "</br>" 
-                			+ "the Washington Redskins were introduced into the NFL in the year" + $(this).find("year_introduced").text() 
+                		$(xml).find("washingtonRedskinsinfo").each(function(){
+                			$("#rb").append("<li>" + "the Washington Redskins are in the " + $(this).find("divison").text() + "</br>" 
+                			+ "the Washington Redskins are owned by " +  $(this).find("owner").text() + "</br>" 
+                			+ "the Washington Redskins were introduced into the NFL in the year " + $(this).find("year_introduced").text() 
                 			+ "</br>" 
-                			+ "the Washington Redskins overall record is" + $(this).find("record").text() + "</br>"
-                			+ "the Washington Redskins rivals are" + $(this).find("rivals").text() + "</br>"
-                			+ "the Washington Redskins stadium name is" + $(this).find("stadium_name").text() + "</br>"
-                			+ "the Washington Redskins have won" + $(this).find("superbowls").text() + " superbowls" + "</br>"
-                			+ "the Washington Redskins have" + $(this).find("HOF_number").text() + "in the Hall of Fame" + "</br>"
-                			+ "the Washington Redskins Hall of Famers are" + $(this).find("HOF").text() + "</br>" + "</li>" 
+                			+ "the Washington Redskins overall record is " + $(this).find("record").text() + "</br>"
+                			+ "the Washington Redskins rivals are " + $(this).find("rivals").text() + "</br>"
+                			+ "the Washington Redskins stadium name is " + $(this).find("stadium_name").text() + "</br>"
+                			+ "the Washington Redskins have won " + $(this).find("superbowls").text() + "  superbowls" + "</br>"
+                			+ "the Washington Redskins have " + $(this).find("HOF_number").text() + " in the Hall of Fame" + "</br>"
+                			+ "the Washington Redskins Hall of Famers are " + $(this).find("HOF").text() + "</br>" + "</li>" 
 							);
 						});
 						$("#rb").append("</ul>");
@@ -928,7 +931,7 @@
 <td class="history"><li><a href="history.html">History</a></li></td> 
 <td class="ppg"><li><a href="NFLhighlights.html">Highlights</a></li></td> 
 <td class="fs"><li><a href="teamVeiw.html">Team Viewer</a></li></td>
-<td class="li"><li><a href="login.php">Login In</a></li></td>        
+<td class="li"><li><a href="login.php">Login</a></li></td>        
 </tr>
 </table>
 </ul>        
@@ -975,7 +978,7 @@
         </div>  <!--end button div -->
 
            <div class = "ajaxWindow" id="rb">
-            <h1>ajax window</h1>
+            <h1>Click on a team to view information</h1>
            </div><!--end ajax window -->
         </div> <!--end wrapper -->
     </body>

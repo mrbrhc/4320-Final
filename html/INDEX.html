@@ -27,7 +27,8 @@
         background-color: red;
     }    
     h1{
-        color: blue;
+        color: #274d89;
+		font-family: "Rockwell", arial;
     }
     nav{
         color: white;
@@ -46,9 +47,23 @@
         width: 100%;
         height: 50%;
         background-color: white;
-        border: solid blue 25px;
+        border: solid #274d89 25px;
+		overflow: hidden;
         
       }
+	.navbar a {
+		float: left;
+		color: #274d89;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+		font-family: "Rockwell", arial;
+	}
+	
+	.navbar a:hover {
+	background-color: #ddd;
+	color: black;
+}
     
     .home{
         padding: 0px 75px 0px 75px;
@@ -66,7 +81,6 @@
       padding: 0px 75px 0px 75px;  
     }
     
-    
 </style>
  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -82,6 +96,18 @@
     
 </header> 
 <nav>
+			<div class="navbar">
+				  <a href="INDEX.html">Home</a>
+				  <a href="history.html">History</a>
+				  <a href="NFLhighlights.html">Highlights</a>
+				  <a href="teamVeiw.html">Team Viewer</a>
+				<a href="login.php">Login</a>
+			</div>
+
+		</nav>
+		
+<!--
+<nav>
 <ul>
 <table class="navbar">
 <tr>
@@ -94,6 +120,7 @@
 </table>
 </ul>        
 </nav>        
+-->
     
 <img class="NFL_logo"src="nfl_logo.png" alt= "NATIONAL FOOTBALL LEAGUE">             
         
