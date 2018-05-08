@@ -20,10 +20,15 @@
 **Agile details:** We had three sprints that all lasted approximately one week. We used the Axosoft software to keep track of our progress throughout the entire project. We started off with creating the individual pages on the website. During the second sprint, we worked on gathering all of the information for the teams and adding the button functionality. During the third sprint, we worked on styling and wrapping up any stories that got left behind.
                 
 **Code Pages:**
+
 [Home Page](../4320-Final/html/INDEX.html)
+
 [History](../4320-Final/html/history.html)
+
 [Highlights](../4320-Final/html/NFLhighlights.html)
+
 [Team Viewer](../4320-Final/html/teamVeiw.html)
+
 [Team XML Files](../4320-Final/xml)
 
 
