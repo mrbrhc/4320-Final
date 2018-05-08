@@ -1,4 +1,5 @@
-<!-- <?php
+<!--
+<?php
     
     if(!session_start()){
         header("Location: error.php");
@@ -8,9 +9,11 @@
 	$loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
 	
 	if (!$loggedIn) {
-		header("Location: login.php");
+		header("Location: ../php/login.php");
 		exit;
-	} -->
+	}
+?>
+-->
 
 
 <!DOCTYPE html>
@@ -101,26 +104,12 @@
 				  <a href="history.html">History</a>
 				  <a href="NFLhighlights.html">Highlights</a>
 				  <a href="teamVeiw.html">Team Viewer</a>
-				<a href="login.php">Login</a>
+				<a href="../php/login.php">Login</a>
+				<a href="../php/logout.php">Logout</a>
 			</div>
 
 		</nav>
-		
-<!--
-<nav>
-<ul>
-<table class="navbar">
-<tr>
-<td class="home"><li><a href="INDEX.html">Home</a></li></td>   
-<td class="history"><li><a href="history.html">History</a></li></td> 
-<td class="ppg"><li><a href="NFLhighlights.html">Highlights</a></li></td> 
-<td class="fs"><li><a href="teamVeiw.html">Team Viewer</a></li></td>
-<td class="li"><li><a href="login.php">Login In</a></li></td>        
-</tr>
-</table>
-</ul>        
-</nav>        
--->
+
     
 <img class="NFL_logo"src="nfl_logo.png" alt= "NATIONAL FOOTBALL LEAGUE">             
         

@@ -22,6 +22,6 @@
 	
 	
 	// Redirect to login
-	header("Location: login.php");
+	header("Location: ../php/login.php");
 	exit;
 ?>
