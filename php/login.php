@@ -29,7 +29,7 @@
 	$loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
 	
 	if ($loggedIn) {
-		header("Location: index.php");
+		header("Location: INDEX.php");
 		exit;
 	}
 	
@@ -78,7 +78,7 @@
             // If there was a match, login
   		    if ($match == 1) {
                 $_SESSION['loggedin'] = $username;
-                header("Location: index.php");
+                header("Location: INDEX.php");
                 exit;
             } else {
                 $error = 'Error: Incorrect username or password';
